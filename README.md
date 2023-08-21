@@ -47,6 +47,8 @@ Download the following checkpoint: [link](https://drive.google.com/file/d/1m8SVt
 
 __N.B.__: to run the inference you need to download the checkpoints and the dataset (at least the small one).
 
+### Inference on a single image - example
+
 To run the inference on a single image, run the following command:
 
 ```bash
@@ -56,7 +58,7 @@ conda activate not-w-my-name-env
 python src/inference.py --dataset-folder <path-to-dataset> --query-img <path-to-query-image> --model-ckpt <path-to-checkpoint> --cuda --results-folder <path-to-results-folder>
 ```
 
-### Inference on a single image - example
+#### Inference on a single image - example
 
 ```bash
 # activate the environment
@@ -113,4 +115,4 @@ If you find this code useful for your research, please cite our paper:
 ## Credits
 __Authors__: [Roberto Leotta](https://www.linkedin.com/in/roberto-leotta-b68571176/), [Oliver Giudice](https://www.linkedin.com/in/oliver-giudice/), [Luca Guarnera](https://www.dmi.unict.it/lguarnera/), [Sebastiano Battiato](https://www.dmi.unict.it/~battiato/)  
 __Version__: 1.0  
-__Date__: 08/22/2023
+__Date__: 08/21/2023
