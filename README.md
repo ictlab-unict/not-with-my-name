@@ -18,9 +18,11 @@ Use [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.h
 With conda installed, run the following commands:
 
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/ictlab-unict/not-with-my-name.git
-# create the environment
+# 2. navigate to the repository folder
+cd not-with-my-name
+# 3. create the environment
 conda env create -f docs/environment.yml
 ```
 
@@ -39,7 +41,7 @@ After downloading the dataset, extract it in the `resources` folder. The folder 
 
 ### Checkpoints
 
-Download the following checkpoint: [link](https://drive.google.com/file/d/1m8SVte9B7XbnFN_oRS_tZQm22WSkwEN8/view?usp=sharing), then extract it in `resources/ckpts` folder. The folder structure should be as the [following](resources/README.md).
+Download the following checkpoint: [link](https://drive.google.com/file/d/1m8SVte9B7XbnFN_oRS_tZQm22WSkwEN8/view?usp=sharing) and place it in `resources/ckpts` folder. The folder structure should be as the [following](resources/README.md).
 
 ---
 
@@ -47,33 +49,35 @@ Download the following checkpoint: [link](https://drive.google.com/file/d/1m8SVt
 
 __N.B.__: to run the inference you need to download the checkpoints and the dataset (at least the small one).
 
-### Inference on a single image - example
+### Inference on a single image
 
 To run the inference on a single image, run the following command:
 
 ```bash
-# activate the environment
+# 1. activate the environment
 conda activate not-w-my-name-env
-# run the inference
+# 2. run the inference
 python src/inference.py --dataset-folder <path-to-dataset> --query-img <path-to-query-image> --model-ckpt <path-to-checkpoint> --cuda --results-folder <path-to-results-folder>
 ```
+
+__Results__ will be saved in the `--results-folder <path-to-results-folder>`.
 
 #### Inference on a single image - example
 
 ```bash
-# activate the environment
+# 1. activate the environment
 conda activate not-w-my-name-env
-# run the inference
+# 2. run the inference
 python src/inference.py --dataset-folder resources/small-dataset/ --query-img resources/small-dataset/pablo_picasso/ai_generated/102_0.png --model-ckpt resources/ckpts/siamese_not_w_my_name.ckpt --cuda --results-folder results
 ```
 
 ### Inference usage
 
 ```
-usage: inference.py [-h] [--show-time] [--debug] --dataset-folder
-                    DATASET_FOLDER [--results-folder RESULTS_FOLDER]
-                    --query-img QUERY_IMAGE [--distance-th DISTANCE_TH]
-                    [--cuda] --model-ckpt MODEL_CKPT
+usage: inference.py [-h] [--show-time] [--debug] 
+                    --dataset-folder DATASET_FOLDER --results-folder RESULTS_FOLDER 
+                    --query-img QUERY_IMAGE [--distance-th DISTANCE_TH] [--cuda]
+                    --model-ckpt MODEL_CKPT
 
 Not with my name inference by Roberto Leotta
 
@@ -88,7 +92,7 @@ optional arguments:
   --query-img QUERY_IMAGE
                         query image path
   --distance-th DISTANCE_TH
-                        distance threshold for the query image
+                        distance threshold for the query image. Default: 0.5
   --cuda                use CUDA for inference
   --model-ckpt MODEL_CKPT
                         siamese model checkpoint
@@ -115,4 +119,4 @@ If you find this code useful for your research, please cite our paper:
 ## Credits
 __Authors__: [Roberto Leotta](https://www.linkedin.com/in/roberto-leotta-b68571176/), [Oliver Giudice](https://www.linkedin.com/in/oliver-giudice/), [Luca Guarnera](https://www.dmi.unict.it/lguarnera/), [Sebastiano Battiato](https://www.dmi.unict.it/~battiato/)  
 __Version__: 1.0  
-__Date__: 08/21/2023
+__Date__: 08/22/2023

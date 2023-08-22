@@ -7,7 +7,7 @@ not-with-my-name
 ├── ...
 ├── resources
 │   ├── ckpts
-│   │   │   └── siamese_ai_thief.ckpt
+│   │   │   └── siamese_not_w_my_name.ckpt
 │   │   │
 │   ├── small-dataset
 │   │   │   ├── alfred_sisley

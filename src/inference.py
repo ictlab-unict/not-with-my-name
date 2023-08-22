@@ -62,12 +62,12 @@ if __name__ == "__main__":
     
     parser.add_argument('--dataset-folder', dest='dataset_folder', type=str, required=True, 
                         help='dataset folder path')
-    parser.add_argument('--results-folder', dest='results_folder', required=False, default='', type=str, 
+    parser.add_argument('--results-folder', dest='results_folder', required=True, default='', type=str, 
                         help='results folder path')
     parser.add_argument('--query-img', dest='query_image', type=str, required=True, 
                         help='query image path')
     parser.add_argument('--distance-th', dest='distance_th', type=float, required=False, default=0.5,
-                        help='distance threshold for the query image')
+                        help='distance threshold for the query image. Default: 0.5')
     
     parser.add_argument('--cuda', required=False, default=False, action='store_true',
                         help='use CUDA for inference')
