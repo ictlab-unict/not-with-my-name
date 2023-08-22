@@ -118,5 +118,5 @@ If you find this code useful for your research, please cite our paper:
 
 ## Credits
 __Authors__: [Roberto Leotta](https://www.linkedin.com/in/roberto-leotta-b68571176/), [Oliver Giudice](https://www.linkedin.com/in/oliver-giudice/), [Luca Guarnera](https://www.dmi.unict.it/lguarnera/), [Sebastiano Battiato](https://www.dmi.unict.it/~battiato/)  
-__Version__: 1.0  
+__Version__: 1.0.1  
 __Date__: 08/22/2023
