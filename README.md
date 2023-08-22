@@ -56,7 +56,7 @@ To run the inference on a single image, run the following command:
 ```bash
 # 1. activate the environment
 conda activate not-w-my-name-env
-# 2. run the inference
+# 2. run inference
 python src/inference.py --dataset-folder <path-to-dataset> --query-img <path-to-query-image> --model-ckpt <path-to-checkpoint> --cuda --results-folder <path-to-results-folder>
 ```
 
@@ -67,7 +67,7 @@ __Results__ will be saved in the `--results-folder <path-to-results-folder>`.
 ```bash
 # 1. activate the environment
 conda activate not-w-my-name-env
-# 2. run the inference
+# 2. run inference
 python src/inference.py --dataset-folder resources/small-dataset/ --query-img resources/small-dataset/pablo_picasso/ai_generated/102_0.png --model-ckpt resources/ckpts/siamese_not_w_my_name.ckpt --cuda --results-folder results
 ```
 
